@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="./bootstrap.min.css" rel="stylesheet">
+    <script src="./bootstrap.bundle.min.js"></script>
+    <script src="./react.development.js"></script>
+    <script src="./react-dom.development.js"></script>
+    <script src="./babel.min.js"></script>
+    <script src="./popper.js"></script>
+    <script src="./react-router-dom.production.min.js"></script>
+</head>
+
+<body>
+
+    <div id="mydiv"></div>
+
+    <script type="text/babel">
+        // objeto <hello />
+        const menu = {
+            <nav 
+            className={"navbar navbar-expand-lg bg-body-tertiary"}
+            >
+
+         <div  
+             class={"container-fluid"}>
+        
+         <a 
+        class={"navbar-brand"} 
+        href="#">
+        Navbar
+
+        </a>
+
+
+    <button 
+    class={"navbar-toggler"}
+     type={"button"} 
+     data-bs-toggle={"collapse"} 
+     data-bs-target={"#navbarNav"} 
+     aria-controls={"navbarNav"} 
+     aria-expanded="false" 
+     aria-label={"Toggle navigation"}
+     >
+      <span 
+      className={"navbar-toggler-icon"}
+      ></span>
+
+    </button>
+
+    <div
+           class={"collapse navbar-collapse"} 
+           id={"navbarNav"}>
+      <ul 
+      class={"navbar-nav"}>
+        <li 
+        class={"nav-item"}>
+          <a 
+          class={"nav-link active"} 
+          aria-current={"page"}
+           href={"#"}
+           >
+           Home
+           </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+        }
+
+         
+     
+        const container = document.getElementById('mydiv');
+        const root = ReactDOM.createRoot(container);
+        root.render(
+            <React.StrictMode>
+                <Nome />
+                <Sobrenome />
+                <Endereco />
+                </React.StrictMode>
+
+        )
+
+        //root.render(<hello />);  //renderizar via objeto (retornavel de função)
+        //root.render (hello2); // renderizar via variavel (contem o objeto de função)
+       //  root.render(<h1> teste </h1>); // renderização  no renderizador 
+    </script>
+
+</body>
+
+</html>
